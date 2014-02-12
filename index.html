@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>graduation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="lib/jquery.mobile-1.4.0.min.css">
+
+    <script src="lib/jquery-1.10.2.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.0.min.js"></script>
+
+</head>
+<body>
+    <div data-role="page" id="note_list_page">
+        <div data-role="header">
+            <h1>梦想云笔记</h1>
+            <a href="#" class="ui-btn-right ui-btn ui-btn-inline ui-corner-all ui-icon-user ui-btn-icon-notext"></a>
+        </div>
+        <div id="note_list_page_content">
+            <ul data-role="listview">
+                <li><a href="index.html">
+                    <h2>Stephen Weber</h2>
+                    <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
+                    <p class="ui-li-aside">6:24PM</p>
+                </a></li>
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#" class="ui-btn-active">笔记</a></li>
+                    <li><a href="#">笔记本</a></li>
+                    <li><a href="#">回收站</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="note_book_page">
+        <div data-role="header">
+            <h1>梦想云笔记</h1>
+            <a class="ui-btn-right ui-btn ui-btn-inline ui-corner-all ui-icon-user ui-btn-icon-notext" onclick="alert('123')"></a>
+        </div>
+        <div id="note_book_page_content">
+            <ul data-role="listview">
+                <li><a>
+                    Stephen
+                </a></li>
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#">笔记</a></li>
+                    <li><a href="#" class="ui-btn-active">笔记本</a></li>
+                    <li><a href="#">回收站</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div data-role="page" id="book_note_list_page">
+        <div data-role="header">
+            <h1>梦想云笔记</h1>
+            <a href="#" class="ui-btn-right ui-btn ui-btn-inline ui-corner-all ui-icon-user ui-btn-icon-notext"></a>
+        </div>
+        <div id="book_note_list_page_content">
+            <ul data-role="listview">
+                <li><a href="index.html">
+                    <h2>Stephen Weber</h2>
+                    <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
+                    <p class="ui-li-aside">6:24PM</p>
+                </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="page" id="recycle_page">
+        <div data-role="header">
+            <h1>梦想云笔记</h1>
+            <a class="ui-btn-right ui-btn ui-btn-inline ui-corner-all ui-icon-user ui-btn-icon-notext" onclick="alert('123')"></a>
+        </div>
+        <div id="recycle_page_content">
+            <ul data-role="listview">
+                <li><a href="index.html">
+                    <h2>Stephen Weber</h2>
+                    <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
+                    <p class="ui-li-aside">6:24PM</p>
+                </a></li>
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#">笔记</a></li>
+                    <li><a href="#">笔记本</a></li>
+                    <li><a href="#"  class="ui-btn-active">回收站</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="note_page">
+        <div data-role="header">
+            <h1>梦想云笔记</h1>
+            <a href="#" class="ui-btn-right ui-btn ui-btn-inline ui-corner-all ui-icon-user ui-btn-icon-notext"></a>
+        </div>
+        <div id="note_page_content">
+            <form>
+                <div class="ui-field-contain">
+                    <label for="note_title">标题:</label>
+                    <input type="text" name="note_title" id="note_title" placeholder="标题" value="">
+                </div>
+                <label for="note_content">内容:</label>
+                <textarea cols="40" rows="8" name="note_content" id="note_content" placeholder="内容"></textarea>
+            </form>
+        </div>
+    </div>
+
+    <div data-role="page" id="login_page">
+        <div data-role="header">
+            <h1>梦想云笔记</h1>
+        </div>
+        <div id="login_page_content" class="ui-contain">
+            <form>
+                <label for="login_name">用户名：</label>
+                <input type="email" name="login_name" data-clear-btn="true" id="login_name" placeholder="注册邮箱" />
+                <label for="login_password">密码：</label>
+                <input type="password" name="login_password" data-clear-btn="true" id="login_password" />
+                <div style="text-align: center">
+                    <button class="ui-btn ui-btn-inline">注册</button>
+                    <button class="ui-btn ui-btn-inline">登陆</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div data-role="page" id="register_page">
+        <div data-role="header">
+            <h1>梦想云笔记</h1>
+        </div>
+        <div id="register_page_content">
+            <form>
+                <label for="register_name">用户名：</label>
+                <input type="email" name="register_name" data-clear-btn="true" id="register_name" placeholder="邮箱" />
+                <label for="register_password">密码：</label>
+                <input type="password" name="register_password" data-clear-btn="true" id="register_password" placeholder="密码" />
+                <label for="register_rePassword">重复密码：</label>
+                <input type="password" name="register_rePassword" data-clear-btn="true" id="register_rePassword" placeholder="重复密码"/>
+                <div style="text-align: center">
+                    <button class="ui-btn ui-btn-inline">取消</button>
+                    <button class="ui-btn ui-btn-inline">注册</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
