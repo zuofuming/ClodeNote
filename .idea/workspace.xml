@@ -4,7 +4,7 @@
     <list default="true" id="e1e6d848-b679-4e4c-8863-fa75327f8365" name="Default" comment="" />
     <ignored path="graduation.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="e1e6d848-b679-4e4c-8863-fa75327f8365" time="1392111293556" ignored="false" />
+    <file path="/index.html" changelist="e1e6d848-b679-4e4c-8863-fa75327f8365" time="1392259580745" ignored="false" />
     <file path="/DummyFile.xpath" changelist="e1e6d848-b679-4e4c-8863-fa75327f8365" time="1389667420379" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,23 +25,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="121" column="41" selection-start="4554" selection-end="4554" vertical-scroll-proportion="0.64631957">
+            <state line="105" column="40" selection-start="3935" selection-end="3935" vertical-scroll-proportion="-13.916667">
               <folding>
-                <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
                 <element signature="tag#div#1;tag#body#0;tag#html#0" expanded="false" />
                 <element signature="tag#div#2;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
                 <element signature="tag#div#3;tag#body#0;tag#html#0" expanded="false" />
                 <element signature="tag#div#4;tag#body#0;tag#html#0" expanded="false" />
                 <element signature="tag#div#5;tag#body#0;tag#html#0" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="tag#div#6;tag#body#0;tag#html#0" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="tag#div#7;tag#body#0;tag#html#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="init.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/init.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="17" selection-start="33" selection-end="33" vertical-scroll-proportion="0.025817556">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -56,6 +63,7 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/js/init.js" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -111,6 +119,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -121,8 +143,8 @@
     <property name="options.lastSelected" value="fileColors" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
@@ -153,12 +175,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="22" width="1260" height="704" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6715928" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6715928" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -240,19 +262,17 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="121" column="41" selection-start="4554" selection-end="4554" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#div#1;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#div#2;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#div#3;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#div#4;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#div#5;tag#body#0;tag#html#0" expanded="false" />
             <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="tag#div#6;tag#body#0;tag#html#0" expanded="false" />
             <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="tag#div#7;tag#body#0;tag#html#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -261,17 +281,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#div#1;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#div#2;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#div#3;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#div#4;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#div#5;tag#body#0;tag#html#0" expanded="false" />
             <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="tag#div#6;tag#body#0;tag#html#0" expanded="false" />
             <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="tag#div#7;tag#body#0;tag#html#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#3;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#4;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#5;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="tag#div#6;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="tag#div#7;tag#body#0;tag#html#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -280,17 +315,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="21" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#div#1;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#div#2;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#div#3;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#div#4;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#div#5;tag#body#0;tag#html#0" expanded="false" />
             <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="tag#div#6;tag#body#0;tag#html#0" expanded="false" />
             <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="tag#div#7;tag#body#0;tag#html#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -406,20 +439,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="41" selection-start="4554" selection-end="4554" vertical-scroll-proportion="0.64631957">
+        <state line="105" column="40" selection-start="3935" selection-end="3935" vertical-scroll-proportion="-13.916667">
           <folding>
-            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#div#1;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#div#2;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#div#3;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#div#4;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#div#5;tag#body#0;tag#html#0" expanded="false" />
             <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="tag#div#6;tag#body#0;tag#html#0" expanded="false" />
             <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="tag#div#7;tag#body#0;tag#html#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="17" selection-start="33" selection-end="33" vertical-scroll-proportion="0.025817556">
+          <folding />
         </state>
       </provider>
     </entry>
