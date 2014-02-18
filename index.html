@@ -10,6 +10,7 @@
     <script src="lib/jquery-1.10.2.min.js"></script>
     <script src="lib/jquery.mobile-1.4.0.min.js"></script>
     <script src="js/init.js"></script>
+    <script src="js/user.js"></script>
 
 </head>
 <body>
@@ -125,16 +126,16 @@
             <h1>梦想云笔记</h1>
         </div>
         <div id="login_page_content" class="ui-contain">
-            <form>
+            <!--<form>-->
                 <label for="login_name">用户名：</label>
                 <input type="email" name="login_name" data-clear-btn="true" id="login_name" placeholder="注册邮箱" />
                 <label for="login_password">密码：</label>
                 <input type="password" name="login_password" data-clear-btn="true" id="login_password" />
                 <div style="text-align: center">
                     <button class="ui-btn ui-btn-inline">注册</button>
-                    <button class="ui-btn ui-btn-inline">登陆</button>
+                    <button class="ui-btn ui-btn-inline" onclick="login()">登陆</button>
                 </div>
-            </form>
+            <!--</form>-->
         </div>
     </div>
 
@@ -143,7 +144,7 @@
             <h1>梦想云笔记</h1>
         </div>
         <div id="register_page_content">
-            <form>
+            <!--<form>-->
                 <label for="register_name">用户名：</label>
                 <input type="email" name="register_name" data-clear-btn="true" id="register_name" placeholder="邮箱" />
                 <label for="register_password">密码：</label>
@@ -152,9 +153,9 @@
                 <input type="password" name="register_rePassword" data-clear-btn="true" id="register_rePassword" placeholder="重复密码"/>
                 <div style="text-align: center">
                     <button class="ui-btn ui-btn-inline">取消</button>
-                    <button class="ui-btn ui-btn-inline">注册</button>
+                    <button class="ui-btn ui-btn-inline" onclick="register()">注册</button>
                 </div>
-            </form>
+            <!--</form>-->
         </div>
     </div>
 
