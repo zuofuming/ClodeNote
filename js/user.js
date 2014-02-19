@@ -4,10 +4,36 @@ function get_user_name()
     return user_name;
 }
 
+function get_user_password(){
+    var user_password = $('#login_password').val();
+    return user_password;
+}
+
 function login(){
     var name = get_user_name();
-    console.log(name);
+    var password = get_user_password();
+    $.post("http://127.0.0.1/CloudNoteServer/login.php",
+        { name:name, password:password },
+        function(data){
+            deal_with_login(data,name,password);
+        },"json");
 }
+
+function deal_with_login(data,name,passord){
+    if(data.success){
+        localStorage.user_name = name;
+        localStorage.user_password = passord;
+    }else{
+        alert("登陆失败，请重新登陆");
+        clear_all_of_login_page_input();
+    }
+}
+
+function clear_all_of_login_page_input(){
+    $('#login_name').val('');
+    $('#login_password').val('');
+}
+
 
 
 function register(){
@@ -29,10 +55,14 @@ function deal_with_register(data){
         $('#register_name').val('');
     }
     if(data.message != 'exist' && data.success == false){
-        $('#register_name').val('');
-        $('#register_password').val('');
-        $('#register_rePassword').val('');
+        clear_all_of_register_page_input();
     }
+}
+
+function clear_all_of_register_page_input(){
+    $('#register_name').val('');
+    $('#register_password').val('');
+    $('#register_rePassword').val('');
 }
 
 function if_registration_info_right(){

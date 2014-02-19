@@ -10,7 +10,9 @@
     <script src="lib/jquery-1.10.2.min.js"></script>
     <script src="lib/jquery.mobile-1.4.0.min.js"></script>
     <script src="js/init.js"></script>
+    <script src="js/page.js"></script>
     <script src="js/user.js"></script>
+
 
 </head>
 <body>
@@ -132,7 +134,7 @@
                 <label for="login_password">密码：</label>
                 <input type="password" name="login_password" data-clear-btn="true" id="login_password" />
                 <div style="text-align: center">
-                    <button class="ui-btn ui-btn-inline">注册</button>
+                    <button class="ui-btn ui-btn-inline" onclick="go_to_register_page()">注册</button>
                     <button class="ui-btn ui-btn-inline" onclick="login()">登陆</button>
                 </div>
             <!--</form>-->
