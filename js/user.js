@@ -19,10 +19,11 @@ function login(){
         },"json");
 }
 
-function deal_with_login(data,name,passord){
+function deal_with_login(data,name,password){
     if(data.success){
+        localStorage.user_id = data.user_id;
         localStorage.user_name = name;
-        localStorage.user_password = passord;
+        localStorage.user_password = password;
     }else{
         alert("登陆失败，请重新登陆");
         clear_all_of_login_page_input();
@@ -49,6 +50,7 @@ function register(){
 function deal_with_register(data){
     if(data.success == true){
         alert('注册成功！');
+        clear_all_of_register_page_input();
     }
     if(data.message == 'exist' && data.success == false){
         alert("用户名已存在，请重新注册");

@@ -4,12 +4,12 @@
     header('Access-Control-Allow-Origin:*');
     $account= $_REQUEST['name'];
  	$password = $_REQUEST['password'];
-//	$account = "1547806333@qq.com";
-//	$password = "12345";
+//	$account = "2@2.c";
+//	$password = "2";
 
 	$db = new db();
-	$sql = "select * from CN_users where user_name='{$account}' and user_password='{$password}'";
-	$result = $db->queryRowNum($sql);
+	$sql = "select user_id from CN_users where user_name='{$account}' and user_password='{$password}'";
+	$result = $db->query($sql)->fetchAll();
 	if (!$result || !$account || !$password)
     {
         $msg = false;
@@ -18,6 +18,7 @@
     }
 	$logInfo = array(
         "success"=>$msg,
+        "user_id"=>$result[0]["user_id"]
     );
 
 

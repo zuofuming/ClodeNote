@@ -12,6 +12,7 @@
     <script src="js/init.js"></script>
     <script src="js/page.js"></script>
     <script src="js/user.js"></script>
+    <script src="js/note/addNote.js"></script>
 
 
 </head>
@@ -20,6 +21,7 @@
         <div data-role="header">
             <h1>梦想云笔记</h1>
             <a href="#user_set" data-rel="popup" class="ui-btn-right ui-btn ui-btn-inline ui-corner-all ui-icon-user ui-btn-icon-notext"></a>
+            <a href="#note_page" data-transition="slideup" class="ui-btn-left ui-btn ui-btn-inline ui-corner-all ui-icon-edit ui-btn-icon-notext"></a>
         </div>
         <div id="note_list_page_content">
             <ul data-role="listview">
@@ -44,7 +46,8 @@
     <div data-role="page" id="note_book_page">
         <div data-role="header">
             <h1>梦想云笔记</h1>
-            <a href="#user_set" data-rel="popup" class="ui-btn-right ui-btn ui-btn-inline ui-corner-all ui-icon-user ui-btn-icon-notext"></a>
+            <a href="#note_page" data-transition="slideup" class="ui-btn-left ui-btn ui-btn-inline ui-corner-all ui-icon-edit ui-btn-icon-notext"></a>
+            <a href="#" class="ui-btn-right ui-btn ui-btn-inline ui-corner-all ui-icon-bars ui-btn-icon-notext"></a>
         </div>
         <div id="note_book_page_content">
             <ul data-role="listview">
@@ -68,7 +71,7 @@
     <div data-role="page" id="book_note_list_page">
         <div data-role="header">
             <h1>梦想云笔记</h1>
-            <a href="#user_set" data-rel="popup" class="ui-btn-right ui-btn ui-btn-inline ui-corner-all ui-icon-user ui-btn-icon-notext"></a>
+            <a href="#note_page" data-transition="slideup" class="ui-btn-left ui-btn ui-btn-inline ui-corner-all ui-icon-edit ui-btn-icon-notext"></a>
         </div>
         <div id="book_note_list_page_content">
             <ul data-role="listview">
@@ -84,7 +87,8 @@
     <div data-role="page" id="recycle_page">
         <div data-role="header">
             <h1>梦想云笔记</h1>
-            <a href="#user_set" data-rel="popup" class="ui-btn-right ui-btn ui-btn-inline ui-corner-all ui-icon-user ui-btn-icon-notext"></a>
+            <a href="#note_page" data-transition="slideup" class="ui-btn-left ui-btn ui-btn-inline ui-corner-all ui-icon-edit ui-btn-icon-notext"></a>
+            <a href="#" class="ui-btn-right ui-btn ui-btn-inline ui-corner-all ui-icon-gear ui-btn-icon-notext"></a>
         </div>
         <div id="recycle_page_content">
             <ul data-role="listview">
@@ -112,52 +116,52 @@
             <a href="#user_set" data-rel="popup" class="ui-btn-right ui-btn ui-btn-inline ui-corner-all ui-icon-user ui-btn-icon-notext"></a>
         </div>
         <div id="note_page_content">
-            <form>
-                <div class="ui-field-contain">
-                    <label for="note_title">标题:</label>
-                    <input type="text" name="note_title" id="note_title" placeholder="标题" value="">
-                </div>
-                <label for="note_content">内容:</label>
-                <textarea cols="40" rows="8" name="note_content" id="note_content" placeholder="内容"></textarea>
-            </form>
+            <div class="ui-field-contain">
+                <label for="new_note_title">标题:</label>
+                <input type="text" name="new_note_title" id="new_note_title" placeholder="标题" value="">
+            </div>
+            <label for="new_note_content">内容:</label>
+            <textarea cols="40" rows="8" name="new_note_content" id="new_note_content" placeholder="内容"></textarea>
+            <div style="text-align: center">
+                <button class="ui-btn ui-btn-inline" onclick="">取消</button>
+                <button class="ui-btn ui-btn-inline" onclick="add_note()">完成</button>
+            </div>
         </div>
     </div>
 
     <div data-role="page" id="login_page">
         <div data-role="header">
             <h1>梦想云笔记</h1>
+            <a href="#note_list_page" data-transition="slide" class="ui-btn-left ui-btn ui-btn-inline ui-corner-all ui-icon-back ui-btn-icon-notext"></a>
         </div>
         <div id="login_page_content" class="ui-contain">
-            <!--<form>-->
-                <label for="login_name">用户名：</label>
-                <input type="email" name="login_name" data-clear-btn="true" id="login_name" placeholder="注册邮箱" />
-                <label for="login_password">密码：</label>
-                <input type="password" name="login_password" data-clear-btn="true" id="login_password" />
-                <div style="text-align: center">
-                    <button class="ui-btn ui-btn-inline" onclick="go_to_register_page()">注册</button>
-                    <button class="ui-btn ui-btn-inline" onclick="login()">登陆</button>
-                </div>
-            <!--</form>-->
+            <label for="login_name">用户名：</label>
+            <input type="email" name="login_name" data-clear-btn="true" id="login_name" placeholder="注册邮箱" />
+            <label for="login_password">密码：</label>
+            <input type="password" name="login_password" data-clear-btn="true" id="login_password" />
+            <div style="text-align: center">
+                <button class="ui-btn ui-btn-inline" onclick="go_to_register_page()">注册</button>
+                <button class="ui-btn ui-btn-inline" onclick="login()">登陆</button>
+            </div>
         </div>
     </div>
 
     <div data-role="page" id="register_page">
         <div data-role="header">
             <h1>梦想云笔记</h1>
+            <a href="#note_list_page" data-transition="slide" class="ui-btn-left ui-btn ui-btn-inline ui-corner-all ui-icon-back ui-btn-icon-notext"></a>
         </div>
         <div id="register_page_content">
-            <!--<form>-->
-                <label for="register_name">用户名：</label>
-                <input type="email" name="register_name" data-clear-btn="true" id="register_name" placeholder="邮箱" />
-                <label for="register_password">密码：</label>
-                <input type="password" name="register_password" data-clear-btn="true" id="register_password" placeholder="密码" />
-                <label for="register_rePassword">重复密码：</label>
-                <input type="password" name="register_rePassword" data-clear-btn="true" id="register_rePassword" placeholder="重复密码"/>
-                <div style="text-align: center">
-                    <button class="ui-btn ui-btn-inline">取消</button>
-                    <button class="ui-btn ui-btn-inline" onclick="register()">注册</button>
-                </div>
-            <!--</form>-->
+            <label for="register_name">用户名：</label>
+            <input type="email" name="register_name" data-clear-btn="true" id="register_name" placeholder="邮箱" />
+            <label for="register_password">密码：</label>
+            <input type="password" name="register_password" data-clear-btn="true" id="register_password" placeholder="密码" />
+            <label for="register_rePassword">重复密码：</label>
+            <input type="password" name="register_rePassword" data-clear-btn="true" id="register_rePassword" placeholder="重复密码"/>
+            <div style="text-align: center">
+                <button class="ui-btn ui-btn-inline" onclick="go_to_login_page()">取消</button>
+                <button class="ui-btn ui-btn-inline" onclick="register()">注册</button>
+            </div>
         </div>
     </div>
 
