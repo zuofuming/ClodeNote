@@ -14,6 +14,7 @@
     <script src="js/user.js"></script>
     <script src="js/note/addNote.js"></script>
     <script src="js/note/loadNoteList.js"></script>
+    <script src="js/note/lookNote.js"></script>
 
 
 </head>
@@ -121,6 +122,25 @@
             <div style="text-align: center">
                 <button class="ui-btn ui-btn-inline" onclick="go_to_note_list_page()">取消</button>
                 <button class="ui-btn ui-btn-inline" onclick="add_note()">完成</button>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="note_view_page">
+        <div data-role="header">
+            <h1>梦想云笔记</h1>
+            <a href="#user_set" data-rel="popup" class="ui-btn-right ui-btn ui-btn-inline ui-corner-all ui-icon-user ui-btn-icon-notext"></a>
+        </div>
+        <div id="note_view_page_content">
+            <div class="ui-field-contain">
+                <label for="note_title">标题:</label>
+                <input type="text" name="note_title" id="note_title" placeholder="标题" value="">
+            </div>
+            <label for="note_content">内容:</label>
+            <textarea cols="40" rows="8" name="note_content" id="note_content" placeholder="内容"></textarea>
+            <div style="text-align: center">
+                <button class="ui-btn ui-btn-inline" onclick="go_to_note_list_page()">返回</button>
+                <button class="ui-btn ui-btn-inline" onclick="">更改</button>
             </div>
         </div>
     </div>

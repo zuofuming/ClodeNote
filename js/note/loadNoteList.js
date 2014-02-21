@@ -26,8 +26,12 @@ function get_note_list_info_from_storage(){
 function translate_note_list_info_to_html(note_list_info){
     var result_html = "";
     for(var i = note_list_info.length-1;i >= 0; i--){
-        result_html += '<li id="' +note_list_info[i].id + '"><a href="#"><h2>' + note_list_info[i].title +
-            '</h2><p><strong>' + note_list_info[i].content + '</strong></p><p class="ui-li-aside">' +
+        var note_content_array = note_list_info[i].content.split('\n');
+        note_list_info[i].content=note_list_info[i].content.replace("\n","\\n");
+        result_html += '<li id="' +note_list_info[i].id + '"><a onclick=\'look_note_from_note_list_page(' +
+            note_list_info[i].id +',\"'+ note_list_info[i].title +'\",\"'+ note_list_info[i].content +
+            '\")\'><h2>' + note_list_info[i].title +
+            '</h2><p><strong>' + note_content_array[0] + '</strong></p><p class="ui-li-aside">' +
             note_list_info[i].time + '</p></a></li>'
     }
     return result_html;
