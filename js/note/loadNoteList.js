@@ -8,7 +8,6 @@ function load_note_list(){
 
 function deal_with_load_note_list(data){
     localStorage.note_list_info = JSON.stringify(data);
-    alert(localStorage.note_list_info);
     display_note_list_info_in_note_list_page();
 }
 
