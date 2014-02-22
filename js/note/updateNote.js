@@ -15,7 +15,7 @@ function  get_note_content(){
 }
 
 function upload_updated_note(note_id,note_title,note_content,notebook_id){
-    $.post("http://127.0.0.1/CloudNoteServer/updateNote.php",
+    $.post(database_host + "updateNote.php",
         {note_id:note_id,title:note_title,content:note_content,notebook_id:notebook_id},
         function(data){
             deal_with_update_note(data);

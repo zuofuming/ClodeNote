@@ -12,7 +12,7 @@ function get_user_password(){
 function login(){
     var name = get_user_name();
     var password = get_user_password();
-    $.post("http://127.0.0.1/CloudNoteServer/login.php",
+    $.post(database_host + "login.php",
         { name:name, password:password },
         function(data){
             deal_with_login(data,name,password);
@@ -24,6 +24,9 @@ function deal_with_login(data,name,password){
         localStorage.user_id = data.user_id;
         localStorage.user_name = name;
         localStorage.user_password = password;
+        alert(data.user_id);
+        load_note_list();
+        go_to_note_list_page();
     }else{
         alert("登陆失败，请重新登陆");
         clear_all_of_login_page_input();
@@ -39,7 +42,7 @@ function clear_all_of_login_page_input(){
 
 function register(){
     if(if_registration_info_right()){
-        $.post("http://127.0.0.1/CloudNoteServer/register.php",
+        $.post(database_host + "register.php",
             { name:$('#register_name').val() , password: $('#register_password').val() },
             function(data){
                deal_with_register(data);

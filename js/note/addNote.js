@@ -11,7 +11,7 @@ function add_note(){
     var new_note_title = get_new_note_title();
     var new_note_content = get_new_note_content();
     var user_id = localStorage.user_id;
-    $.post("http://127.0.0.1/CloudNoteServer/addNote.php",
+    $.post(database_host + "addNote.php",
         { title:new_note_title, content:new_note_content,user_id:user_id },
         function(data){
             deal_with_add_note(data);

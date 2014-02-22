@@ -1,5 +1,5 @@
 function load_note_list(){
-    $.post("http://127.0.0.1/CloudNoteServer/loadNoteList.php",
+    $.post(database_host + "loadNoteList.php",
         { user_id:localStorage.user_id },
         function(data){
             deal_with_load_note_list(data);
