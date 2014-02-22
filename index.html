@@ -17,6 +17,7 @@
     <script src="js/note/lookNote.js"></script>
     <script src="js/note/updateNote.js"></script>
     <script src="js/note/deleteNote.js"></script>
+    <script src="js/recycle/loadTrashList.js"></script>
 
 
 </head>
@@ -85,17 +86,13 @@
 
     <div data-role="page" id="recycle_page">
         <div data-role="header">
-            <h1>梦想云笔记</h1>
+            <h1><a onclick="load_trash_list()" >梦想云笔记</a></h1>
             <a href="#note_page" data-transition="slideup" class="ui-btn-left ui-btn ui-btn-inline ui-corner-all ui-icon-edit ui-btn-icon-notext"></a>
             <a href="#" class="ui-btn-right ui-btn ui-btn-inline ui-corner-all ui-icon-gear ui-btn-icon-notext"></a>
         </div>
         <div id="recycle_page_content">
-            <ul data-role="listview">
-                <li><a href="index.html">
-                    <h2>Stephen Weber</h2>
-                    <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
-                    <p class="ui-li-aside">6:24PM</p>
-                </a></li>
+            <ul data-role="listview" id="recycle_page_list">
+
             </ul>
         </div>
         <div data-role="footer" data-position="fixed">
@@ -190,6 +187,7 @@
             <li><a href="#">注销</a></li>
         </ul>
     </div>
+
     <div data-role="page" id="confirm_delete_note" data-theme="a">
         <p>确定要该删除笔记么（删除后笔记将存在回收站）？</p>
         <div class="ui-grid-a">

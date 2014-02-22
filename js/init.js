@@ -1,5 +1,5 @@
-//var database_host = "http://127.0.0.1/CloudNoteServer/";
-var database_host = "http://192.168.1.101/CloudNoteServer/";
+var database_host = "http://127.0.0.1/CloudNoteServer/";
+//var database_host = "http://192.168.1.101/CloudNoteServer/";
 $( function() {
     $( "#user_set" ).enhanceWithin().popup();
 
@@ -16,6 +16,10 @@ $( function() {
 
     if(!localStorage.note_list_info){
         localStorage.note_list_info = " ";
+    }
+
+    if(!localStorage.trash_list_info){
+        localStorage.trash_list_info = " ";
     }
 
     display_note_list_info_in_note_list_page();
