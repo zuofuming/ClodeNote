@@ -40,5 +40,6 @@ function render_note_list_info_in_note_list_page(result_html){
     $('#note_list_page_list').html(result_html);
     try{
         $('#note_list_page_list').listview('refresh');
+        add_swipe_action_for_deleting_note();
     }catch(e){}
 }

@@ -1,4 +1,5 @@
-var database_host = "http://127.0.0.1/CloudNoteServer/";
+//var database_host = "http://127.0.0.1/CloudNoteServer/";
+var database_host = "http://192.168.1.101/CloudNoteServer/";
 $( function() {
     $( "#user_set" ).enhanceWithin().popup();
 
