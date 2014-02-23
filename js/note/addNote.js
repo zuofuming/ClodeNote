@@ -20,6 +20,7 @@ function add_note(){
 
 function deal_with_add_note(data){
     if(data.success){
+        load_note_list();
         go_to_note_list_page();
         clear_all_of_note_page_input();
     }else{

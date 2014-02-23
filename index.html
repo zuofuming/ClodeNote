@@ -18,6 +18,8 @@
     <script src="js/note/updateNote.js"></script>
     <script src="js/note/deleteNote.js"></script>
     <script src="js/recycle/loadTrashList.js"></script>
+    <script src="js/recycle/clearRecycle.js"></script>
+    <script src="js/recycle/recoverNote.js"></script>
 
 
 </head>
@@ -88,7 +90,7 @@
         <div data-role="header">
             <h1><a onclick="load_trash_list()" >梦想云笔记</a></h1>
             <a href="#note_page" data-transition="slideup" class="ui-btn-left ui-btn ui-btn-inline ui-corner-all ui-icon-edit ui-btn-icon-notext"></a>
-            <a href="#" class="ui-btn-right ui-btn ui-btn-inline ui-corner-all ui-icon-gear ui-btn-icon-notext"></a>
+            <a href="#recycle_set" data-rel="popup" class="ui-btn-right ui-btn ui-btn-inline ui-corner-all ui-icon-gear ui-btn-icon-notext"></a>
         </div>
         <div id="recycle_page_content">
             <ul data-role="listview" id="recycle_page_list">
@@ -102,6 +104,23 @@
                     <li><a href="#note_book_page" data-transition="flip">笔记本</a></li>
                     <li><a href="#"  class="ui-btn-active ui-state-persist">回收站</a></li>
                 </ul>
+            </div>
+        </div>
+
+        <div data-role="popup" id="recycle_set" data-theme="a" data-dismissible="false">
+            <div role="main" class="ui-content">
+                <h3 class="ui-title">确定要清空回收站么？</h3>
+                <p>清空后笔记无法恢复</p>
+                <a class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-rel="back">取消</a>
+                <a onclick="clear_recycle()" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-rel="back">清空</a>
+            </div>
+        </div>
+
+        <div data-role="popup" id="recover_note" data-theme="a" data-dismissible="false">
+            <div role="main" class="ui-content">
+                <h3 class="ui-title">还原后才能查看笔记</h3>
+                <a class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-rel="back">取消</a>
+                <a onclick="recover_note(localStorage.note_id)" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-rel="back">还原</a>
             </div>
         </div>
     </div>
@@ -187,6 +206,7 @@
             <li><a href="#">注销</a></li>
         </ul>
     </div>
+
 
     <div data-role="page" id="confirm_delete_note" data-theme="a">
         <p>确定要该删除笔记么（删除后笔记将存在回收站）？</p>

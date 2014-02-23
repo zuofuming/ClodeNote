@@ -23,5 +23,6 @@ $( function() {
     }
 
     display_note_list_info_in_note_list_page();
+    display_trash_list_info_in_recycle_page();
 });
 

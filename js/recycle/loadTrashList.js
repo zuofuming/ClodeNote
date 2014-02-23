@@ -25,7 +25,7 @@ function get_trash_list_info_from_storage(){
 function translate_trash_list_info_to_html(trash_list_info){
     var result_html = "";
     for(var i= trash_list_info.length-1; i>=0; i-- ){
-        result_html += '<li id="' +trash_list_info[i].id + '"><a href="#"><h2>' + trash_list_info[i].title +
+        result_html += '<li id="' +trash_list_info[i].id + '"><a onclick="confirm_recover_note('+ trash_list_info[i].id +')"><h2>' + trash_list_info[i].title +
             '</h2><p><strong>' + trash_list_info[i].content + '</strong></p><p class="ui-li-aside">' +
             trash_list_info[i].time + '</p></a></li>';
     }
