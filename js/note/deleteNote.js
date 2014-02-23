@@ -7,7 +7,8 @@ function add_swipe_action_for_deleting_note(){
 }
 
 function open_dialog_to_confirm_delete(){
-    $.mobile.changePage( "#confirm_delete_note", { role: "dialog" } );
+    $('#confirm_delete_note').popup();
+    $('#confirm_delete_note').popup("open");
 }
 
 function cancel_delete_note(){
@@ -25,6 +26,7 @@ function delete_note(){
 function deal_with_delete_note(data){
     if(data.success){
         load_note_list();
+        load_trash_list();
         go_to_note_list_page();
     }else{
         alert("删除失败,请重试");
