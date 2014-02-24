@@ -30,5 +30,5 @@ function deal_with_add_note(data){
 
 function clear_all_of_note_page_input(){
     $("#new_note_title").val("");
-    $("new_note_content").val("");
+    $("#new_note_content").val("");
 }
