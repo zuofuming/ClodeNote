@@ -100,3 +100,10 @@ function if_register_password_idenyical(){
     }
     return true;
 }
+
+function cancellation(){
+    go_to_login_page();
+    localStorage.clear();
+    load_note_list();
+    load_trash_list();
+}

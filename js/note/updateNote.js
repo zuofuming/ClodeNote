@@ -2,7 +2,11 @@ function update_note(){
     var note_id = localStorage.note_id;
     var title = get_note_title();
     var content = get_note_content();
-    upload_updated_note(note_id,title,content,0);
+    if(title == ''&& content ==''){
+        delete_note_if_update_blank_note(note_id);
+    }else{
+        upload_updated_note(note_id,title,content,0);
+    }
 }
 
 function get_note_title(){
@@ -29,4 +33,12 @@ function deal_with_update_note(data){
     } else{
         alert('更新失败，请重试');
     }
+}
+
+function delete_note_if_update_blank_note(id){
+    $.post(database_host + "deleteNote.php",
+        { note_id:id},
+        function(data){
+            deal_with_delete_note(data);
+        },"json");
 }

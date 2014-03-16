@@ -11,11 +11,15 @@ function add_note(){
     var new_note_title = get_new_note_title();
     var new_note_content = get_new_note_content();
     var user_id = localStorage.user_id;
-    $.post(database_host + "addNote.php",
-        { title:new_note_title, content:new_note_content,user_id:user_id },
-        function(data){
-            deal_with_add_note(data);
-        },"json");
+    if(new_note_content == '' && new_note_title == ''){
+        go_to_note_list_page();
+    }else{
+        $.post(database_host + "addNote.php",
+            { title:new_note_title, content:new_note_content,user_id:user_id },
+            function(data){
+                deal_with_add_note(data);
+            },"json");
+    }
 }
 
 function deal_with_add_note(data){
@@ -31,4 +35,9 @@ function deal_with_add_note(data){
 function clear_all_of_note_page_input(){
     $("#new_note_title").val("");
     $("#new_note_content").val("");
+}
+
+function cancel_add_note(){
+    go_to_note_list_page();
+    clear_all_of_note_page_input();
 }

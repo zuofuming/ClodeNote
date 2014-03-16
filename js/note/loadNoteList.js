@@ -25,15 +25,32 @@ function get_note_list_info_from_storage(){
 function translate_note_list_info_to_html(note_list_info){
     var result_html = "";
     for(var i = note_list_info.length-1;i >= 0; i--){
-        var note_content_array = note_list_info[i].content.split('\n');
+        var note_content_preview = preview_note_content(note_list_info[i].content)
         note_list_info[i].content=note_list_info[i].content.replace(/\n/g,"\\n");
         result_html += '<li id="' +note_list_info[i].id + '"><a onclick=\'look_note_from_note_list_page(' +
             note_list_info[i].id +',\"'+ note_list_info[i].title +'\",\"'+ note_list_info[i].content +
-            '\")\'><h2>' + note_list_info[i].title +
-            '</h2><p><strong>' + note_content_array[0] + '</strong></p><p class="ui-li-aside">' +
+            '\")\'><h2 style="length=1">' + preview_note_title(note_list_info[i].title) +
+            '</h2><p><strong>' + note_content_preview + '</strong></p><p class="ui-li-aside">' +
             note_list_info[i].time + '</p></a></li>'
     }
     return result_html;
+}
+
+function preview_note_title(title){
+    title = title.replace( /^\s*/,"");
+    title = title.substr(0,10);
+    return title;
+}
+
+function preview_note_content(content){
+    var content_array = content.split('\n');
+    for(var i = content_array.length-1;i >= 0; i--){
+        if(content_array[i] != '\n'){
+            return content_array[i].replace( /^\s*/,"");
+            break;
+        }
+    }
+
 }
 
 function render_note_list_info_in_note_list_page(result_html){
