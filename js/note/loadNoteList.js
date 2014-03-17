@@ -25,7 +25,7 @@ function get_note_list_info_from_storage(){
 function translate_note_list_info_to_html(note_list_info){
     var result_html = "";
     for(var i = note_list_info.length-1;i >= 0; i--){
-        var note_content_preview = preview_note_content(note_list_info[i].content)
+        var note_content_preview = preview_note_content(note_list_info[i].content);
         note_list_info[i].content=note_list_info[i].content.replace(/\n/g,"\\n");
         result_html += '<li id="' +note_list_info[i].id + '"><a onclick=\'look_note_from_note_list_page(' +
             note_list_info[i].id +',\"'+ note_list_info[i].title +'\",\"'+ note_list_info[i].content +
