@@ -1,0 +1,7 @@
+<?php
+	//1. 定义数据库配置信恄1�7
+	define ('DB_USER', SAE_MYSQL_USER);
+	define ('DB_PASSWORD', SAE_MYSQL_PASS);
+	define ('DB_HOST', SAE_MYSQL_HOST_M);
+	define ('DB_NAME', SAE_MYSQL_DB);
+?>

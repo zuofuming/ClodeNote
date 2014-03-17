@@ -1,5 +1,5 @@
-var database_host = "http://127.0.0.1/CloudNoteServer/";
-// var database_host = "http://192.168.168.118/CloudNoteServer/";
+//var database_host = "http://127.0.0.1/CloudNoteServer/";
+var database_host = "http://dreamcloudnote.sinaapp.com/";
 $( function() {
     $( "#user_set" ).enhanceWithin().popup();
 
@@ -24,10 +24,11 @@ $( function() {
 
     if(localStorage.user_id == ""){
         go_to_login_page();
+    }else{
+        load_note_list();
+        load_trash_list();
     }
 
-    load_note_list();
-    load_trash_list();
 //    display_note_list_info_in_note_list_page();
 //    display_trash_list_info_in_recycle_page();
 });
