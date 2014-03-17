@@ -24,7 +24,6 @@ function deal_with_login(data,name,password){
         localStorage.user_id = data.user_id;
         localStorage.user_name = name;
         localStorage.user_password = password;
-        alert(data.user_id);
         load_note_list();
         go_to_note_list_page();
     }else{
@@ -102,8 +101,9 @@ function if_register_password_idenyical(){
 }
 
 function cancellation(){
+    clear_all_of_login_page_input();
     go_to_login_page();
     localStorage.clear();
-    load_note_list();
-    load_trash_list();
+    render_note_list_info_in_note_list_page('');
+    render_trash_list_info_in_recycle_page('');
 }
