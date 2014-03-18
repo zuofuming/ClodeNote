@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.phonegap.hello-world"
+        version   = "1.0.0">
+
+    <name>梦想云笔记</name>
+
+    <description>
+        轻量级个人记事备忘工具
+    </description>
+
+    <author href="http://phonegap.com" email="zuofuming711@gmail.com">
+         左馥铭
+    </author>
+
+
+    <preference name="orientation" value="landscape" />
+    <preference name="phonegap-version" value="3.1.0" />
+
+    <gap:platforms> <!-- 注释：支持平台 -->
+    <gap:platform name="android" minVersion="2.1" />
+    <gap:platform name="webos" />
+    <gap:platform name="symbian.wrt" />
+    <gap:platform name="blackberry" project="widgets"/>
+    </gap:platforms>
+
+    <icon src="cloudnote.jpg" gap:role="default" />  <!-- 注释：应用Logo，显示在移动终端桌面上和应用名称一起 -->
+    <gap:splash src="cloudnote_1.jpg"/>  <!-- 注释： 程序启动时显示图像-->
+
+
+<!--<preference name="splash-screen-duration" value="100" />-->
+</widget>

@@ -43,14 +43,14 @@ function preview_note_title(title){
 }
 
 function preview_note_content(content){
-    var content_array = content.split('\n');
-    for(var i = content_array.length-1;i >= 0; i--){
-        if(content_array[i] != '\n'){
-            return content_array[i].replace( /^\s*/,"");
-            break;
-        }
-    }
+    var content_str = ltrim(content);
+    var content_array = content_str.split('\n');
+    return content_array[0].substr(0,20);
+}
 
+function ltrim(str) {
+    var pattern = new RegExp("^[\\s]+","gi");
+    return str.replace(pattern,"");
 }
 
 function render_note_list_info_in_note_list_page(result_html){

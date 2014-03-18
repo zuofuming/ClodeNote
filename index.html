@@ -27,7 +27,7 @@
 </head>
 <body>
     <div data-role="page" id="note_list_page">
-        <div data-role="header">
+        <div data-role="header" data-position="fixed">
             <h1><a onclick="load_note_list()">梦想云笔记</a></h1>
             <a href="#user_set" data-rel="popup" class="ui-btn-right ui-btn ui-btn-inline ui-corner-all ui-icon-user ui-btn-icon-notext"></a>
             <a href="#note_page" data-transition="slideup" class="ui-btn-left ui-btn ui-btn-inline ui-corner-all ui-icon-edit ui-btn-icon-notext"></a>
@@ -59,7 +59,7 @@
     </div>
 
     <div data-role="page" id="recycle_page">
-        <div data-role="header">
+        <div data-role="header" data-position="fixed">
             <h1><a onclick="load_trash_list()" >梦想云笔记</a></h1>
             <a href="#note_page" data-transition="slideup" class="ui-btn-left ui-btn ui-btn-inline ui-corner-all ui-icon-edit ui-btn-icon-notext"></a>
             <a href="#recycle_set" data-rel="popup" class="ui-btn-right ui-btn ui-btn-inline ui-corner-all ui-icon-gear ui-btn-icon-notext"></a>
@@ -97,7 +97,7 @@
     </div>
 
     <div data-role="page" id="note_page">
-        <div data-role="header">
+        <div data-role="header" data-position="fixed">
             <h1>梦想云笔记</h1>
             <a href="#user_set" data-rel="popup" class="ui-btn-right ui-btn ui-btn-inline ui-corner-all ui-icon-user ui-btn-icon-notext"></a>
         </div>
@@ -116,7 +116,7 @@
     </div>
 
     <div data-role="page" id="note_view_page">
-        <div data-role="header">
+        <div data-role="header" data-position="fixed">
             <h1>梦想云笔记</h1>
             <a href="#user_set" data-rel="popup" class="ui-btn-right ui-btn ui-btn-inline ui-corner-all ui-icon-user ui-btn-icon-notext"></a>
         </div>
@@ -135,7 +135,7 @@
     </div>
 
     <div data-role="page" id="login_page">
-        <div data-role="header">
+        <div data-role="header" data-position="fixed">
             <h1>梦想云笔记</h1>
         </div>
         <div id="login_page_content" class="ui-contain">
@@ -151,9 +151,8 @@
     </div>
 
     <div data-role="page" id="register_page">
-        <div data-role="header">
+        <div data-role="header" data-position="fixed">
             <h1>梦想云笔记</h1>
-            <a href="#note_list_page" data-transition="slide" class="ui-btn-left ui-btn ui-btn-inline ui-corner-all ui-icon-back ui-btn-icon-notext"></a>
         </div>
         <div id="register_page_content">
             <label for="register_name">用户名：</label>
